@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X- UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha Ndlovu Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!----------- HEADER/ NAVBAR ---------->
+    <div id="header">
+      <div class="container">
+        <nav>
+
+          <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="contact-me.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1>Hi, I am Martha Ndlovu</h1>
+          <p>Front End Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <!----------- ABOUT ---------->
+    <div id="about">
+      <div class="container">
+        <h1 class="sub-title">About Me</h1>
+        <p> I am an aspiring Junior Front-End Developer with a strong interest in building clean,     responsive, and user-friendly websites. I enjoy working with technologies such as HTML, CSS, JavaScript, and Bootstrap to create simple but effective web interfaces. <br />
+          I have gained practical experience working with WordPress, WooCommerce, and Elementor, Canva and Photoshop, where I assisted with designing product pages, testing responsiveness, and supporting website improvements. This experience helped me understand how websites function in a real business environment. <br />
+           I am currently focused on improving my front-end development skills and learning best practices for modern web design. I enjoy solving problems, learning new technologies, and continuously improving my coding abilities as I work toward building a career in web development.
+        </p>
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/Martha-Image.jpg" />
+          </div>
+          <div class="about-col-2">
+          
+            
+            <div class="tab-titles">
+              <p
+                class="tab-links active-link"
+                onclick="opentab('skills', this)"
+              >
+                Skills
+              </p>
+            
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Photoshop</span><br />Designing Emailer Interfaces
+                </li>
+                <li><span>Banners</span><br />Animate banners</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+              </ul>
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+     </section>
+
+    <!----------- PROJECTS ---------->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+
+        <div class="projects-row">
+
+          <div class="project-card">
+            <h3>Banners</h3>
+            <p>Simple banners I created using Photoshop and Google Web Design.</p>
+            <a href="files/Martha_Ndlovu_Portfolio.pdf" target="_blank">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h3>Emailers</h3>
+            <p>A simple website I created using HTML and CSS, focusing on clean layout and structure.</p>
+            <a href="files/Martha_Ndlovu_Portfolio.pdf" target="_blank">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h3>Website</h3>
+            <p>A project focused on responsive web design that works across different screen sizes.</p>
+            <a href="files/Martha_Ndlovu_Portfolio.pdf" target="_blank">View Project</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+
+
+
+       <footer>
+      <p>&copy; 2026 Martha Ndlovu. All rights reserved.</p>
+    </footer>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname, clickedTab) {
+        /*Remove active class from ALL tab links*/
+        for (var tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        /* Remove active class from ALL tab contents*/
+        for (var tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+      /*Add active class to the tab that was clicked*/
+        clickedTab.classList.add("active-link");
+
+      /*Showing the matching content section*/
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+<!------Hamburger Menu--------->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+
+    /*Close Menu when a link is clicked*/
+    document.querySelectorAll('#nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('open');
+      });
+    });
+  }
+</script>
+ 
+  </body>
+</html>

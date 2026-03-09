@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Martha Ndlovu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* ---------- NAV ---------- */
+      nav {
+        background: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 5%;
+      }
+
+      .logo {
+        width: 50px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: #e94560;
+      }
+
+      /* ---------- PAGE HEADER ---------- */
+      .page-header {
+        background: #000000;
+        padding: 50px 5% 40px;
+        color: #fff;
+      }
+
+      .page-header h1 {
+        font-size: 36px;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .page-header p {
+        color: #e94560;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      /* ---------- CONTACT SECTION ---------- */
+      .contact-section {
+        background: #f9f9f9;
+        padding: 60px 5%;
+        min-height: calc(100vh - 220px);
+      }
+
+      .contact-wrapper {
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .contact-intro {
+        margin-bottom: 30px;
+        color: #000000;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      .contact-form {
+        background: #fff;
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px #e94560;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 20px;
+      }
+
+      .form-row .form-group {
+        flex: 1;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #000000;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #000000;
+        outline: none;
+        font-family: inherit;
+        transition: border-color 0.3s;
+        background: #fafafa;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #e94560;
+        background: #ffffff;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 140px;
+      }
+
+      .btn-submit {
+        background: #e94560;
+        color: #fff;
+        border: none;
+        padding: 13px 40px;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      .btn-submit:hover {
+        background: #c73652;
+      }
+
+      .form-success {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 12px 15px;
+        border-radius: 6px;
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      /* ---------- SOCIAL ICONS ---------- */
+      .social-section {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .social-section p {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 15px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #1a1a2e;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 18px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        transition: all 0.3s;
+      }
+
+      .social-icons a:hover {
+        border-color: #e94560;
+        color: #e94560;
+      }
+
+      .social-icons a svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      /* ---------- FOOTER ---------- */
+      footer {
+        background: #000000;
+        color: #aaa;
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 560px) {
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+        .social-section {
+          flex-direction: column;
+          gap: 10px;
+          font-size: 14px;
+          display: flex;
+        }
+
+        .contact-form {
+          padding: 20px;
+        }
+
+        .social-icons {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .social-icons a {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <img src="" class="logo" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>Contact Me</h1>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-section">
+      <div class="contact-wrapper">
+        <p class="contact-intro">Let's Talk — I'd love to hear from you</p>
+
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What is this about?" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+
+          <button class="btn-submit" onclick="submitForm()">
+            Send Message
+          </button>
+
+          <div class="form-success" id="successMsg">
+            Thank you, your message has been sent successfully!
+          </div>
+
+          <!-- SOCIAL MEDIA ICONS -->
+          <div class="social-section">
+            <p>Or connect with me on</p>
+            <div class="social-icons">
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/Martha-Ndlovu"
+                target="_blank"
+              >
+                <i style="font-size: 24px" class="fa">&#xf0e1;</i>
+
+                LinkedIn
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Martha-Ndlovu" target="_blank">
+                <i style="font-size: 24px" class="fa">&#xf09b;</i>
+
+                GitHub
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/Mumsy Ndlovu" target="_blank">
+                <i style="font-size: 24px" class="fa">&#xf16d;</i>
+
+                Instagram
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://www.whatsapp.com/Mumsy Ndlovu" target="_blank">
+                <i style="font-size: 24px" class="fa fa-whatsapp"></i>
+
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Martha Ndlovu. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function submitForm() {
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var subject = document.getElementById("subject").value.trim();
+        var message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          alert("Please fill in all fields before submitting.");
+          return;
+        }
+
+        document.getElementById("successMsg").style.display = "block";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+      }
+    </script>
+  </body>
+</html>
