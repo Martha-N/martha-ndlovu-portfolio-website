@@ -115,20 +115,16 @@
       var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname, clickedTab) {
-        /*Remove active class from ALL tab links*/
         for (var tablink of tablinks) {
           tablink.classList.remove("active-link");
         }
 
-        /* Remove active class from ALL tab contents*/
         for (var tabcontent of tabcontents) {
           tabcontent.classList.remove("active-tab");
         }
 
-      /*Add active class to the tab that was clicked*/
         clickedTab.classList.add("active-link");
 
-      /*Showing the matching content section*/
         document.getElementById(tabname).classList.add("active-tab");
       }
     </script>
@@ -154,3 +150,4 @@
  
   </body>
 </html>
+
